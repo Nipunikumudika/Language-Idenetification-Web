@@ -14,9 +14,6 @@ app.use(cors());
 app.use(bodyParser.text()); 
 
 app.get("/", (req, res) => res.send("Express on Vercel"));
-const isVercelEnvironment = process.env.NOW_REGION === 'vercel';
-
-const pythonExecutable =process.env.PYTHON
 
 app.post('/predict', (req, res) => {
   // Extract raw text from the request body
@@ -25,8 +22,8 @@ app.post('/predict', (req, res) => {
   console.log('Received features:', features);
 
   // Spawn a new child process to call the python script
-  const python = spawn(pythonExecutable, ['./index.py', features]);
-
+  const python = spawn('python', ['./index.py', features]);
+console.log(python);
   let dataToSend = '';
 
   // Collect data from the script
