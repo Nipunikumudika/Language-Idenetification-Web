@@ -3,7 +3,12 @@
       {
           "src": "./index.js",
           "use": "@vercel/node"
-      }
+      },
+      { "src": "./ml.py", "use": "@vercel/python" },
+      { "src": "./char_vectorizer.pkl", "use": "@vercel/static" },
+      { "src": "./model.pkl", "use": "@vercel/static" },
+      { "src": "./label_encoder.pkl", "use": "@vercel/static" },
+      { "src": "./word_vectorizer.pkl", "use": "@vercel/static" }
   ],
   "routes": [
       {
