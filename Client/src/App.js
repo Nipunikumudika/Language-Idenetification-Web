@@ -63,7 +63,7 @@ console.log(inputText);
       <MDBNavbar expand="lg" light style={{ backgroundColor: "#e3f2fd" }}>
         <MDBContainer fluid>
           <MDBNavbarBrand href="#" style={{ fontWeight: "bold" }}>
-            <img src={require("./icon.png")} height="35" width="35" alt="" />
+          <img src="/icon.png" height="35" width="35" alt="" />
             Language Identifier
           </MDBNavbarBrand>
         </MDBContainer>
