@@ -17,11 +17,12 @@ app.get("/", (req, res) => res.send("Express on Vercel"));
 const isVercelEnvironment = process.env.NOW_REGION === 'vercel';
 
 const pythonExecutable = isVercelEnvironment
-  ? process.env.PYTHON || '/var/lang/python3/bin/python3'
+  ? process.env.PYTHON
   : 'python'; 
 app.post('/predict', (req, res) => {
   // Extract raw text from the request body
   const features = req.body;
+  console.log(pythonExecutable);
   console.log('Received features:', features);
 
   // Spawn a new child process to call the python script
