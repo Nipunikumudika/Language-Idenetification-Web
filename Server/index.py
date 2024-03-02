@@ -11,9 +11,6 @@ import json
 
 features = sys.argv[1]
 
-# Load the saved model
-import os
-
 model = joblib.load('./model.pkl')
 
 # Load the saved encoder
