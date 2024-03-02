@@ -18,7 +18,6 @@ app.get("/", (req, res) => res.send("Express on Vercel"));
 app.post('/predict', (req, res) => {
   // Extract raw text from the request body
   const features = req.body;
-  console.log(pythonExecutable);
   console.log('Received features:', features);
 
   // Spawn a new child process to call the python script
