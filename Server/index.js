@@ -16,9 +16,8 @@ app.use(bodyParser.text());
 app.get("/", (req, res) => res.send("Express on Vercel"));
 const isVercelEnvironment = process.env.NOW_REGION === 'vercel';
 
-const pythonExecutable = isVercelEnvironment
-  ? process.env.PYTHON
-  : 'python'; 
+const pythonExecutable =process.env.PYTHON
+
 app.post('/predict', (req, res) => {
   // Extract raw text from the request body
   const features = req.body;
