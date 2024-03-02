@@ -9,6 +9,8 @@ const port = 5000;
 app.use(cors());
 app.use(bodyParser.text()); 
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 app.post('/predict', (req, res) => {
   // Extract raw text from the request body
   const features = req.body;
