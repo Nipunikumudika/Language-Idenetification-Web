@@ -7,7 +7,7 @@ import re
 import string
 import joblib
 import numpy as np
-import json
+
 
 app = Flask(__name__)
 CORS(app)
@@ -15,16 +15,16 @@ CORS(app)
 print("Server started")
 
 # Load the model
-model = joblib.load('/model.pkl')
+model = joblib.load('./model.pkl')
 
 # Load the label encoder
-encoder = joblib.load('/label_encoder.pkl')
+encoder = joblib.load('./label_encoder.pkl')
 
 # Load the vectorizers
-with open('/char_vectorizer.pkl', 'rb') as file:
+with open('./char_vectorizer.pkl', 'rb') as file:
     loaded_char_vectorizer = joblib.load(file)
 
-with open('/word_vectorizer.pkl', 'rb') as file:
+with open('./word_vectorizer.pkl', 'rb') as file:
     loaded_word_vectorizer = joblib.load(file)
 
 def preprocess(texts):
