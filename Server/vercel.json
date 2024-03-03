@@ -31,6 +31,10 @@
       {
         "src": "./index.py",
         "dest": "/index.py"
+    },
+    {
+        "src": "/(.*)",
+        "dest": "/index.js"
     }
   ]
 }
