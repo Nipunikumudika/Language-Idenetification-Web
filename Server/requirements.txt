@@ -3,4 +3,4 @@ joblib
 numpy
 flask
 flask_cors
-sklearn
+scikit-learn
