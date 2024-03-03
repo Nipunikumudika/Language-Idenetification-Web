@@ -21,20 +21,19 @@ app.post('/predict', (req, res) => {
   // Extract raw text from the request body
   const features = req.body;
   console.log('Received features:', features);
-
+  console.log('Environment variables:', os.environ);
   // Spawn a new child process to call the python script
-  // const python = spawn('python', ['./index.py', features]);
-  const scriptPath = './index.py';
-  const pythonProcess = spawn(scriptPath, [features]);
+  const python = spawn('python', ['./index.py', features]);
+
   let dataToSend = '';
 
   // Collect data from the script
-  pythonProcess.stdout.on('data', (data) => {
+  python.stdout.on('data', (data) => {
     dataToSend += data.toString();
   });
 
   // In the close event, we are sure that the stream from the child process is closed
-  pythonProcess.on('close', (code) => {
+  python.on('close', (code) => {
     console.log(`Child process close all stdio with code ${code}`);
     // Send data to the browser
     res.send(dataToSend);
