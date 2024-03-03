@@ -1,10 +1,5 @@
 {
   "builds": [
-      {
-          "src": "./index.js",
-          "use": "@vercel/node"
-      },
-
       {"src": "./index.py", "use": "@vercel/python", "config": {"runtime": "python" }},
       { "src": "./char_vectorizer.pkl", "use": "@vercel/static" },
       { "src": "./model.pkl", "use": "@vercel/static" },
@@ -28,13 +23,9 @@
         "src": "./word_vectorizer.pkl",
         "dest": "/word_vectorizer.pkl"
     },
-      {
-        "src": "./index.py",
-        "dest": "/index.py"
-    },
     {
         "src": "/(.*)",
-        "dest": "/index.js"
+        "dest": "/index.py"
     }
   ]
 }
