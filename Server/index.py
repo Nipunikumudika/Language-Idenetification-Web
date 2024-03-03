@@ -9,6 +9,7 @@ import numpy as np
 import sys
 import json
 
+print("completed")
 features = sys.argv[1]
 
 model = joblib.load('./model.pkl')

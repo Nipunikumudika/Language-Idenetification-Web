@@ -24,7 +24,7 @@ app.post('/predict', (req, res) => {
 
   // Spawn a new child process to call the python script
   const python = spawn('python', ['index.py', features]);
-console.log(python);
+
   let dataToSend = '';
 
   // Collect data from the script
