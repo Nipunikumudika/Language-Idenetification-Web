@@ -10,11 +10,5 @@
       { "src": "./model.pkl", "use": "@vercel/static" },
       { "src": "./label_encoder.pkl", "use": "@vercel/static" },
       { "src": "./word_vectorizer.pkl", "use": "@vercel/static" }
-  ],
-  "routes": [
-      {
-          "src": "/(.*)",
-          "dest": "/index.js"
-      }
   ]
 }
