@@ -23,7 +23,7 @@ app.post('/predict', (req, res) => {
   console.log('Received features:', features);
 
   // Spawn a new child process to call the python script
-  const python = spawn('python', ['index.py', features]);
+  const python = spawn('python', ['./index.py', features]);
 
   let dataToSend = '';
 

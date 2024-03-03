@@ -10,5 +10,27 @@
       { "src": "./model.pkl", "use": "@vercel/static" },
       { "src": "./label_encoder.pkl", "use": "@vercel/static" },
       { "src": "./word_vectorizer.pkl", "use": "@vercel/static" }
+  ],
+  "routes": [
+      {
+          "src": "./char_vectorizer.pkl",
+          "dest": "/char_vectorizer.pkl"
+      },
+      {
+        "src": "./model.pkl",
+        "dest": "/model.pkl"
+    },
+    {
+        "src": "./label_encoder.pkl",
+        "dest": "/label_encoder.pkl"
+    },
+    {
+        "src": "./word_vectorizer.pkl",
+        "dest": "/word_vectorizer.pkl"
+    },
+      {
+        "src": "./index.py",
+        "dest": "/index.py"
+    }
   ]
 }
