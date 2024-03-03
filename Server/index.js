@@ -21,7 +21,8 @@ app.post('/predict', (req, res) => {
   // Extract raw text from the request body
   const features = req.body;
   console.log('Received features:', features);
-  console.log('Environment variables:', process.env.python);
+  console.log('Current working directory:', process.cwd());
+  console.log('Environment variables:', process.env);
   // Spawn a new child process to call the python script
   const python = spawn('python', ['./index.py', features]);
 
