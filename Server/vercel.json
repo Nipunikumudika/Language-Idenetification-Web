@@ -1,7 +1,4 @@
 {
-    "env": {
-        "python": "3.9"
-      },
   "builds": [
       {
           "src": "./index.js",
@@ -21,5 +18,4 @@
         "dest": "/index.js"
     }
   ]
-
 }
