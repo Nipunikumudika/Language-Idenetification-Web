@@ -1,6 +1,6 @@
 {
     "env": {
-        "python": "3.9"
+        "PYTHON": "3.9"
       },
   "builds": [
       {
@@ -15,7 +15,11 @@
       { "src": "./word_vectorizer.pkl", "use": "@vercel/static" }
   ],
   "routes": [
-     
+    {
+        "src": "/index.py",
+        "dest": "/index.py"
+    }
+,    
     {
         "src": "/(.*)",
         "dest": "/index.js"
