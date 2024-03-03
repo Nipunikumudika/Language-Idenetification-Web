@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "python": "3.9"
+  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "content-disposition": "^0.5.4",
